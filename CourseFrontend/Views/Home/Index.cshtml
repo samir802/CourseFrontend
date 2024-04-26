@@ -15,6 +15,9 @@
         .profile-image img {
             height: 100%;
         }
+        .card-body{
+            cursor: pointer;
+        }
 
         /* Style the link as a block element to make the whole card body clickable */
         .card-link {
@@ -43,7 +46,6 @@
         }
 
         .vote-icons {
-            justify-content: flex-end;
             margin-bottom: 5px;
 
         }
@@ -63,31 +65,29 @@
         </div>
 
         <!-- Wrap the card body with the link -->
-        <a href="Home/blogDescription" class="card-link">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="mb-3">
-                                <h3>Lorem ipsum</h3>
-                                <p class="text-muted truncate-3-lines">by Samir Shrestha <span id="blogger"></span></p>
-                                <p class="truncate-3-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                            <p class="text-muted no-wrap">Posted on: 2024-04-25</p>
-                            <div class="vote-icons">
-                                <i class="fa-solid fa-circle-arrow-up"></i>
-                                <i class="fa-solid fa-circle-arrow-down"></i>
-                            </div>
+        <div class="card">
+            <div class="card-body" onclick="window.location.href='Home/blogDescription';">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="mb-3">
+                            <h3>Lorem ipsum</h3>
+                            <p class="text-muted truncate-3-lines">by Samir Shrestha <span id="blogger"></span></p>
+                            <p class="truncate-3-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="mb-3 profile-image">
-                                <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" class="img-fluid" alt="Placeholder Image">
-                            </div>
+                        <p class="text-muted no-wrap">Posted on: 2024-04-25</p>
+                        <div class="vote-icons">
+                            <i class="fa-solid fa-circle-arrow-up" onclick="event.stopPropagation();"></i>
+                            <i class="fa-solid fa-circle-arrow-down" onclick="event.stopPropagation();"></i>
+                        </div>`
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3 profile-image">
+                            <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" class="img-fluid" alt="Placeholder Image">
                         </div>
                     </div>
                 </div>
             </div>
-        </a>
+        </div>
     </div>
 
     <!-- Bootstrap JS (optional, for certain features like dropdowns, tooltips, etc.) -->
