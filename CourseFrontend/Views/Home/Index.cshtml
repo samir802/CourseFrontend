@@ -1,36 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@{
+    ViewData["Title"] = "Home Page";
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS for user profile circle -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         .profile-image img {
             height: 100%;
         }
-        .card-body{
+
+        .card-body {
             cursor: pointer;
         }
 
-        /* Style the link as a block element to make the whole card body clickable */
         .card-link {
             display: block;
             color: inherit;
-            text-decoration: none; /* Remove default underline */
+            text-decoration: none;
         }
 
             .card-link:hover {
-                color: inherit; /* Maintain default text color on hover */
+                color: inherit; 
             }
-
-        /* Truncate text after three lines and add ellipsis */
         .truncate-3-lines {
             overflow: hidden;
             display: -webkit-box;
@@ -38,7 +36,6 @@
             -webkit-box-orient: vertical;
         }
 
-        /* Ensure the text doesn't wrap */
         .no-wrap {
             white-space: nowrap;
             overflow: hidden;
@@ -47,15 +44,23 @@
 
         .vote-icons {
             margin-bottom: 5px;
-
         }
 
             .vote-icons i {
                 cursor: pointer;
                 font-size: 35px;
                 margin-left: 10px;
-                color:grey;
+                color: grey;
             }
+
+        #add-icon {
+            position: fixed;
+            bottom: 100px; 
+            right: 80px; 
+            font-size: 70px;
+            color: #007bff;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -63,8 +68,6 @@
         <div class="card-header mb-4">
             <h2>Latest Post</h2>
         </div>
-
-        <!-- Wrap the card body with the link -->
         <div class="card">
             <div class="card-body" onclick="window.location.href='Home/blogDescription';">
                 <div class="row">
@@ -78,7 +81,7 @@
                         <div class="vote-icons">
                             <i class="fa-solid fa-circle-arrow-up" onclick="event.stopPropagation();"></i>
                             <i class="fa-solid fa-circle-arrow-down" onclick="event.stopPropagation();"></i>
-                        </div>`
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="mb-3 profile-image">
@@ -88,7 +91,11 @@
                 </div>
             </div>
         </div>
+        <i class="fas fa-plus-circle" id="add-icon"></i>
+
     </div>
+
+    <!-- Font Awesome icon -->
 
     <!-- Bootstrap JS (optional, for certain features like dropdowns, tooltips, etc.) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
