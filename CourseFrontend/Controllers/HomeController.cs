@@ -27,6 +27,10 @@ namespace CourseFrontend.Controllers
         {
             return View();
         }
+        public IActionResult createBlog()
+        {
+            return View();
+        }
         public IActionResult profilePage()
         {
             return View();

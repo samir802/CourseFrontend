@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CourseFrontend.styles.css" asp-append-version="true" />
+    <style>
+        .nav-item.active {
+            background-color: green !important;
+        }
+
+            .nav-item.active a {
+                color: #fff !important;
+            }
+    </style>
 </head>
 <body>
     <header>
@@ -19,16 +28,17 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Privacy" ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="profilePage">Profile</a>
-                        </li>
+
                     </ul>
+                    <a asp-controller="Home" asp-action="profilePage">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/street-portrait-of-a-young-man-using-mobile-phone-royalty-free-image-1018047498-1564431457.jpg?crop=0.668xw:1.00xh;0.226xw,0&resize=640:*" alt="Profile Image" class="rounded-circle me-5" style="width: 50px; height:50px">
+                    </a>
                 </div>
             </div>
         </nav>
